@@ -1,4 +1,4 @@
-import SideBanner from "@/components/auth/SideBanner";
+import SideBanner from "../../components/auth/SideBanner";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -12,16 +12,14 @@ const signup = () => {
         <title>Sign in - Daniels SMS</title>
       </Head>
       <div className="h-screen md:flex">
-        <div className="lg:px-16 px-2 md:w-1/2 flex items-center justify-center flex-col relative py-6 bg-white ">
-          <Link href="/">
-            <Image
-              src={sms}
-              alt="Image"
-              className="w-12 top-8 left-6 lg:left-20  h-12 rounded-xl cursor-pointer transition-all hover:pb-1 absolute"
-            ></Image>
-          </Link>
+        <div className="lg:px-16 px-2 md:w-1/2 flex items-center justify-center flex-col relative py-6 bg-accent">
+          <div className="top-8 left-6 lg:left-16   rounded-xl cursor-pointer transition-all hover:pb-1 absolute">
+            <Link href="/">
+              <Image src={sms} alt="Image" width={48} height={48}></Image>
+            </Link>
+          </div>
 
-          <div className="bg-gray-50 p-6 rounded-lg w-full">
+          <div className="bg-slate-200 p-6 rounded-lg w-full">
             <h1 className="text-3xl font-poppins text-center font-bold my-6 lg:my-6">
               Sign in
             </h1>

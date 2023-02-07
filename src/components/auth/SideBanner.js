@@ -1,9 +1,9 @@
 import Image from "next/image";
 import React from "react";
-import dashboard from "/public/images/dashboard.webp";
+import dashboard from "/public/images/dashboard.gif";
 const SideBanner = () => {
   return (
-    <div className="relative overflow-hidden md:flex w-1/2 bg-gradient-to-tr from-blue-800 to-purple-700 i justify-around items-center hidden">
+    <div className="relative overflow-hidden md:flex w-1/2 bg-gradient-to-tr from-gray-800 to-slate-400 i justify-around items-center hidden">
       <div>
         {/* <h1 className="text-white font-bold text-5xl text-center mb-8 font-sans">
           GoDanny
@@ -12,7 +12,7 @@ const SideBanner = () => {
         <Image
           src={dashboard}
           alt="Image"
-          className="w-full h-full mx-6 rounded-xl cursor-pointer transition-all hover:mb-5"
+          className="w-11/12 h-full mx-auto rounded-xl cursor-pointer transition-all hover:mb-5"
         ></Image>
       </div>
       <div className="absolute -bottom-32 -left-40 xl:w-64 w-40 h-40 xl:h-64 border-4 rounded-full border-opacity-30 border-t-8" />
