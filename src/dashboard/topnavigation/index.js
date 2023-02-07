@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useToggle } from "../provider/context";
 
 export default function TopNavigation() {
@@ -35,7 +36,7 @@ export default function TopNavigation() {
                   <a>Settings</a>
                 </li>
                 <li className="hover:bg-slate-800 ">
-                  <a>Logout</a>
+                  <Link href="/auth/signin">Sign in</Link>
                 </li>
               </ul>
             </div>

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import dashboard from "/public/images/dashboard.gif";
+import dashboard from "/public/images/dashboard.png";
 const SideBanner = () => {
   return (
     <div className="relative overflow-hidden md:flex w-1/2 bg-gradient-to-tr from-gray-800 to-slate-400 i justify-around items-center hidden">

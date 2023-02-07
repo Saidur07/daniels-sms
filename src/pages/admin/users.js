@@ -106,7 +106,127 @@ export default function UsersPage() {
       <div className="w-full lg:w-8/12 bg-gray-800 py-6 px-6 rounded-3xl">
         <div className=" flex items-center justify-between  mb-8">
           <p className="text-2xl font-bold text-white">Users</p>
-          <button className="btn lg:btn-wide btn-info">Add User</button>
+          <label
+            className="btn lg:btn-wide btn-error text-white"
+            htmlFor="my-modal-6"
+          >
+            Add User
+          </label>
+
+          <input type="checkbox" id="my-modal-6" className="modal-toggle" />
+          <div className="modal modal-bottom sm:modal-middle">
+            <div className="modal-box relative">
+              <label
+                htmlFor="my-modal-6"
+                className="btn btn-sm btn-circle absolute right-2 top-2"
+              >
+                ✕
+              </label>
+              <h3 className="font-bold text-2xl mb-6">Add New User</h3>
+              <form>
+                <div>
+                  <p className="font-semibold text-lg mb-3">Username </p>
+                  <div className="flex justify-start items-center text-gray-600 rounded-lg border border-[#c7c7c7e8]  py-2 px-4 ">
+                    <div className="inset-y-0 left-0 flex items-center pr-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={1.5}
+                        stroke="currentColor"
+                        className="w-6 h-6"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          d="M16.5 12a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 10-2.636 6.364M16.5 12V8.25"
+                        />
+                      </svg>
+                    </div>
+
+                    <input
+                      required
+                      type="text"
+                      name="User's name here"
+                      className="py-2 text-sm pl-1  w-full text-primary rounded-md focus:outline-none focus:bg-white  bg-transparent focus:text-gray-900"
+                      placeholder="User's name here "
+                    />
+                  </div>
+                </div>
+
+                <br />
+                <div>
+                  <p className="font-semibold text-lg mb-3">Email </p>
+                  <div className="flex justify-start items-center text-gray-600 rounded-lg border border-[#c7c7c7e8]  py-2 px-4 ">
+                    <div className="inset-y-0 left-0 flex items-center pr-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={1.5}
+                        stroke="currentColor"
+                        className="w-6 h-6"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                        />
+                      </svg>
+                    </div>
+
+                    <input
+                      required
+                      type="email"
+                      name="User's email"
+                      className="py-2 text-sm pl-1  w-full text-primary rounded-md focus:outline-none focus:bg-white  bg-transparent focus:text-gray-900"
+                      placeholder="User's email here"
+                    />
+                  </div>
+                </div>
+
+                <br />
+
+                <>
+                  <p className="font-semibold text-lg mb-4"> Password</p>
+                  <div className="flex justify-start items-center text-gray-600 border rounded-lg border-[#c7c7c7e8]  py-2 px-4 ">
+                    <div className="inset-y-0 left-0 flex items-center pr-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-6 w-6 text-primary"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z"
+                        />
+                      </svg>
+                    </div>
+
+                    <input
+                      type="password"
+                      id="password"
+                      name="password"
+                      className="py-2 text-sm pl-1 w-full text-primary rounded-md focus:outline-none focus:bg-white bg-transparent focus:text-gray-900"
+                      placeholder="User's pass here"
+                      required
+                    />
+                  </div>
+                </>
+
+                <label
+                  htmlFor="my-modal-6"
+                  type="submit"
+                  className="   mx-auto w-full rounded-lg btn lg:my-8 my-4 border bg-primary text-white text-center flex items-center justify-center font-semibold   shadow-inner group lg:hover:bg-opacity-90 transition-all"
+                >
+                  Add User
+                </label>
+              </form>
+            </div>
+          </div>
         </div>
         <div className="overflow-x-auto overflow-y-hidden">
           <table className="table  table-zebra  w-full">
@@ -189,7 +309,63 @@ export default function UsersPage() {
         <div className="bg-gray-800 rounded-3xl px-6 pt-6">
           <div className=" flex items-center justify-between  mb-8">
             <p className="text-2xl font-bold text-white">Roles</p>
-            <button className="btn lg:btn-wide btn-info">Add Role</button>
+            <label
+              className="btn lg:btn-wide btn-error text-white"
+              htmlFor="my-modal-7"
+            >
+              Add Role
+            </label>
+
+            <input type="checkbox" id="my-modal-7" className="modal-toggle" />
+            <div className="modal modal-bottom sm:modal-middle">
+              <div className="modal-box relative">
+                <label
+                  htmlFor="my-modal-7"
+                  className="btn btn-sm btn-circle absolute right-2 top-2"
+                >
+                  ✕
+                </label>
+                <h3 className="font-bold text-2xl mb-6">Add New Role</h3>
+                <form>
+                  <div>
+                    <p className="font-semibold text-lg mb-3">Rolename </p>
+                    <div className="flex justify-start items-center text-gray-600 rounded-lg border border-[#c7c7c7e8]  py-2 px-4 ">
+                      <div className="inset-y-0 left-0 flex items-center pr-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth={1.5}
+                          stroke="currentColor"
+                          className="w-6 h-6"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            d="M16.5 12a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 10-2.636 6.364M16.5 12V8.25"
+                          />
+                        </svg>
+                      </div>
+
+                      <input
+                        required
+                        type="text"
+                        name="Give the role a name!"
+                        className="py-2 text-sm pl-1  w-full text-primary rounded-md focus:outline-none focus:bg-white  bg-transparent focus:text-gray-900"
+                        placeholder="Give the role a name! "
+                      />
+                    </div>
+                  </div>
+
+                  <label
+                    htmlFor="my-modal-7"
+                    type="submit"
+                    className="   mx-auto w-full rounded-lg btn lg:my-8 my-4 border bg-primary text-white text-center flex items-center justify-center font-semibold   shadow-inner group lg:hover:bg-opacity-90 transition-all"
+                  >
+                    Add Role
+                  </label>
+                </form>
+              </div>
+            </div>
           </div>
           <div className="overflow-x-auto overflow-y-hidden">
             <table className="table  table-zebra  w-full">
